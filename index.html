@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miafolio</title>
+    <script src="https://kit.fontawesome.com/562a017d32.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+      html {
+        background-color: #1b2c00;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      body {
+        padding-top: 2em;
+        padding-bottom: 3em;
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+      nav,
+      .social,
+      .achievements-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        nav,
+        .social,
+        .achievements-nav { flex-direction: row; }
+      }
+
+      nav a,
+      .social a,
+      .achievements-nav a {
+        flex: 1;
+        text-align: center;
+        margin: 0.25em;
+        padding: 0.25em;
+        border: 1px solid #9e8d8f;
+        background-color: #f4f0f4;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Indie Flower', cursive;
+        color: #f46500;
+      }
+      a {
+        color: #1b2c00;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #f46500;
+      }
+
+      i {
+        color: #4d7701;
+      }
+
+      #welcome {
+        height: 85vh;
+        border-radius: 25px;
+        margin: 0.25em;
+        margin-bottom: 15px;
+        padding: 1em;
+        border: 2px solid #f46500;
+        background-color: #f4f0f4;
+        text-align: center;
+      }
+
+      #about,
+      #skills,
+      #projects,
+      #achievements,
+      #contact {
+        height: auto;
+        border-radius: 25px;
+        margin: 0.25em;
+        margin-bottom: 15px;
+        padding: 1em;
+        border: 2px solid #f46500;
+        background-color: #f4f0f4;
+      }
+
+      #achievements-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .ach-flex-box {
+        height: auto;
+        width: auto;
+        padding: 0.25em;
+        margin: 0.25em;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-align: center;
+        color: #4d7701;
+        font-family: 'Permanent Marker', cursive;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .img-profile {
+        width: 10rem;
+        border: 2px solid #f46500;
+        border-radius: 50%;
+        margin: auto;
+      }
+
+      .img-achievements {
+        width: 150px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .img-achievements { 
+          width: 300px; }
+      }
+
+      .btt {
+        text-align: end;
+      }
+      .form-control {
+            display: block;
+            /* width: 95%; */
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+                -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        footer {
+          height: auto;
+          /* margin: 0.25em;
+          padding: 1em; */
+          color: #9e8d8f;
+        }
+    </style>
+  </head>
+  <body>
+      <section id="welcome">
+        <h1 id="welcome-h1">Welcome</h1>
+        <p>Hi! I'm Mia.</p>
+        <img class="img-profile" src="img/profile.png" alt="Mia's profile image">
+        <p>I am an experienced <br>
+          <em>Quality Assurance Analyst</em>, <br>
+          specializing in <br>
+          <strong>Exploratory Testing, <br>
+            Requirements Analysis,</strong> <br>
+          and <strong>Defect Tracking</strong>.</p>
+
+      </section>
+
+    <nav id="site-nav">
+      <a href="#about" title="About"><i class="fas fa-address-card"></i> About</a>
+      <a href="#skills" title="Skills"><i class="fas fa-clipboard-list"></i> Skills</a>
+      <a href="#projects" title="Projects"><i class="fas fa-ruler-vertical"></i> Projects</a>
+      <a href="#achievements" title="Achievements"><i class="fas fa-graduation-cap"></i> Achievements</a>
+      <a href="#contact" title="Contact"><i class="fas fa-comment"></i> Social</a>
+    </nav>
+
+    <section id="about">
+      <h1 id="about-h1">About</h1>
+      <p>I am well-versed in the <em>Software Development Life Cycle</em> and <em>Software Testing Life Cycle</em> for both <strong>Agile</strong> and <strong>Waterfall</strong> methodologies.</p>
+      <p>I am teaching myself to code in order to further my automation skills, as well as increase my understanding of web-based applications in order to better target potential defects.</p>
+      <p>Apart from testing and web development, I enjoy spending most of my time outdoors. You can find me on the trail day-hiking, camping and backpacking across Canada and Europe. <a href="http://www.merelymccool.ca" title="Merely McCool Hiking Blog" target="_blank">I blog about it here.</a></p>
+      <div class="btt"><small>Back to Top</small> <a href="#welcome" title="Back to top"><i class="fas fa-level-up-alt"></i></a></div>
+
+    </section>
+
+    <section id="skills">
+      <h1 id="skills-h1">Skills</h1>
+      <div>Testing</div>
+        <ul class="fa-ul mb-3">
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Exploratory Testing</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Requirements Analysis</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Defect Tracking</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Cross Browser Testing &amp; Debugging</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Regression Testing</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Agile Testing &amp; Scrum</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Testable Requirements</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Test Planning &amp; Reporting</li>
+        </ul>
+<hr>
+        <div class="subheading mb-3">Test Tools</div>
+        <ul class="fa-ul mb-3">
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Cucumber</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Cypress</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Katalon</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            PHPUnit</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Selenium</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            WebDriver</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            Eclipse</li>
+          <li>
+            <i class="fa-li fas fa-check"></i>
+            UFT / QTP</li>
+        </ul>
+
+      <div class="">Programming Languages</div>
+            <i class="fab fa-html5 fa-2x"></i>
+            <i class="fab fa-css3-alt fa-2x"></i>
+            <i class="fab fa-js-square fa-2x"></i>
+            <i class="fab fa-php fa-2x"></i>
+      <div class="subheading mb-3">Browsers</div>
+            <i class="fab fa-chrome fa-2x"></i>
+            <i class="fab fa-firefox fa-2x"></i>
+            <i class="fab fa-edge fa-2x"></i>
+            <i class="fab fa-internet-explorer fa-2x"></i>
+            <i class="fab fa-safari fa-2x"></i>
+      <div class="subheading mb-3">Operating Systems</div>
+            <i class="fab fa-apple fa-2x"></i>
+            <i class="fab fa-windows fa-2x"></i>
+            <i class="fab fa-android fa-2x"></i>
+      <div class="subheading mb-3">Version Control</div>
+            <i class="fab fa-git fa-2x"></i>
+            <i class="fab fa-bitbucket fa-2x"></i>
+            <i class="fab fa-github fa-2x"></i>
+      <div class="subheading mb-3">Communication</div>
+            <i class="fab fa-slack fa-2x"></i>
+            <i class="fab fa-skype fa-2x"></i>
+      <div class="subheading mb-3">Project Management</div>
+            <i class="fab fa-jira fa-2x"></i>
+            <i class="fab fa-trello fa-2x"></i>
+
+      <div class="btt"><small>Back to Top</small> <a href="#welcome" title="Back to top"><i class="fas fa-level-up-alt"></i></a></div>
+
+    </section>
+
+    <section id="projects">
+      <h1 id="projects-h1">Projects</h1>
+      <p>Wherry squiffy belay jack yard hornswaggle bilged on her anchor to go on account lee Pirate Round bring a spring upon her cable gabion. Jack Tar flogging keelhaul Arr spanker Cat o'nine tails knave squiffy salmagundi galleon barque Jolly Roger. Come about gaff keel Sail ho Jolly Roger doubloon snow lateen sail bilge grog blossom league blow the man down. Hornswaggle hands log bowsprit ballast Chain Shot lugsail red ensign starboard run a shot across the bow rutters Shiver me timbers. Hulk rope's end keelhaul topgallant Privateer hearties measured fer yer chains fire ship shrouds hogshead rum wherry.</p>
+      <div class="btt"><small>Back to Top</small> <a href="#welcome" title="Back to top"><i class="fas fa-level-up-alt"></i></a></div>
+
+    </section>
+
+    <section id="achievements">
+      <h1 id="achievements-h1">Achievements</h1>
+      <div class="achievements-nav">
+        <a href="#tau" title="Test Automation University certificates">TestAutomationU</a>
+        <a href="#sololearn" title="SoloLearn certificates">SoloLearn</a>
+        <a href="#fcc" title="Free Code Camp certificates">FreeCodeCamp</a>
+        <a href="#grasshopper" title="GrassHopper certificates">GrassHopper</a>
+      </div>
+      <p>Learning is a passion of mine. Here is a collection of my completed certificates related to testing and web development by provider.</p>
+      <hr>
+
+      <h3 id="tau">Test Automation University certificates</h3>
+      <div id="achievements-flex">
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-foundation.png" title="Test Automation University - Setting a Foundation for Successful Test Automation certification"><img class="img-achievements" src="./img/certs/tau/TAU-foundation.png" alt="Test Automation University - Setting a Foundation for Successful Test Automation certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-cypress.png" title="Test Automation University - Introduction to Cypress certification"><img class="img-achievements" src="./img/certs/tau/TAU-cypress.png" alt="Test Automation University - Introduction to Cypress certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-team.png" title="Test Automation University - The Whole Team Approach to Continuous Testing certification"><img class="img-achievements" src="./img/certs/tau/TAU-team.png" alt="Test Automation University - The Whole Team Approach to Continuous Testing certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-locator.png" title="Test Automation University - Web Element Locator Strategies certification"><img class="img-achievements" src="./img/certs/tau/TAU-locator.png" alt="Test Automation University - Web Element Locator Strategies certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-SelIDE.png" title="Test Automation University - Codeless Test Automation with Selenium IDE certification"><img class="img-achievements" src="./img/certs/tau/TAU-SelIDE.png" alt="Test Automation University - Codeless Test Automation with Selenium IDE certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-webdriver.png" title="Test Automation University - Automated Visual Testing with WebDriverIO certification"><img class="img-achievements" src="./img/certs/tau/TAU-webdriver.png" alt="Test Automation University - Automated Visual Testing with WebDriverIO certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-docker.png" title="Test Automation University - Scaling Tests with Docker certification"><img class="img-achievements" src="./img/certs/tau/TAU-docker.png" alt="Test Automation University - Scaling Tests with Docker certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/tau/TAU-devops.png" title="Test Automation University - Test Automation in DevOps certification"><img class="img-achievements" src="./img/certs/tau/TAU-devops.png" alt="Test Automation University - Test Automation in DevOps certification"></a>
+        </div>
+      </div>
+      <hr>
+
+      <h3 id="sololearn">SoloLearn certificates</h3>
+      <div id="achievements-flex">
+        <div class="ach-flex-box">
+          <a href="./img/certs/sololearn/SL-js.JPG" title="SoloLearn - JavaScript certification"><img class="img-achievements" src="./img/certs/sololearn/SL-js.JPG" alt="SoloLearn - JavaScript certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/sololearn/SL-php.jpg" title="SoloLearn - PHP certification"><img class="img-achievements" src="./img/certs/sololearn/SL-php.jpg" alt="SoloLearn - PHP certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/sololearn/SL-sql.jpg" title="SoloLearn - SQL certification"><img class="img-achievements" src="./img/certs/sololearn/SL-sql.jpg" alt="SoloLearn - SQL certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/sololearn/SL-py.JPG" title="SoloLearn - Python 3 certification"><img class="img-achievements" src="./img/certs/sololearn/SL-py.JPG" alt="SoloLearn - Python 3 certification"></a>
+        </div>
+      </div>
+      <div class="btt"><small>Back to Top</small> <a href="#welcome" title="Back to top"><i class="fas fa-level-up-alt"></i></a></div>
+      <hr>
+
+      <h3 id="fcc">FreeCodeCamp certificates</h3>
+      <div id="achievements-flex">
+        <div class="ach-flex-box">
+          <a href="./img/certs/fcc/FCC-ResponsiveWebDesign.png" title="Free Code Camp - Responsive Web Design certification"><img class="img-achievements" src="./img/certs/fcc/FCC-ResponsiveWebDesign.png" alt="Free Code Camp - Responsive Web Design certification"></a>
+        </div>
+      </div>
+      <hr>
+
+      <h3 id="grasshopper">GrassHopper certificates</h3>
+      <div id="achievements-flex">
+        <div class="ach-flex-box">
+          <a href="./img/certs/grasshopper/GH-fundamentals.JPG" title="GrassHopper - Fundamentals I certification"><img class="img-achievements" src="./img/certs/grasshopper/GH-fundamentals.JPG" alt="GrassHopper - Fundamentals I certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/grasshopper/GH-fundamentalsII.JPG" title="GrassHopper - Fundamentals II certification"><img class="img-achievements" src="./img/certs/grasshopper/GH-fundamentalsII.JPG" alt="GrassHopper - Fundamentals II certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/grasshopper/GH-array.JPG" title="GrassHopper - Array Methods certification"><img class="img-achievements" src="./img/certs/grasshopper/GH-array.JPG" alt="GrassHopper - Array Methods certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/grasshopper/GH-animations.JPG" title="GrassHopper - Animations I certification"><img class="img-achievements" src="./img/certs/grasshopper/GH-animations.JPG" alt="GrassHopper - Animations I certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/grasshopper/GH-animationsII.JPG" title="GrassHopper - Animations II certification"><img class="img-achievements" src="./img/certs/grasshopper/GH-animationsII.JPG" alt="GrassHopper - Animations II certification"></a>
+        </div>
+        <div class="ach-flex-box">
+          <a href="./img/certs/grasshopper/GH-interview.JPG" title="GrassHopper - Intro to Interviewing certification"><img class="img-achievements" src="./img/certs/grasshopper/GH-interview.JPG" alt="GrassHopper - Intro to Interviewing certification"></a>
+        </div>
+      </div>
+      <div class="btt"><small>Back to Top</small> <a href="#welcome" title="Back to top"><i class="fas fa-level-up-alt"></i></a></div>
+
+    </section>
+
+    <section id="contact">
+      <h1 id="contact-h1">Social</h1>
+      <p>Thanks for stopping by! Let's connect:</p>
+
+        <div class="social form-group">
+          <a href="https://github.com/merelymccool" title="GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.twitter.com/BugHunterQA" title="Twitter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="https://www.linkedin.com/in/mccooldm/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://dev.to/merelymccool" title="DEV.to" target="_blank"><i class="fab fa-dev"></i> DEV.to</a>
+        </div>
+
+        <p>Other profiles:</p>
+
+        <div class="social form-group">
+          <a href="https://testautomationu.applitools.com/me.html#BugHunterQA" title="Test Automation University" target="_blank">TestAutomation University</a>
+          <a href="https://www.freecodecamp.org/bughunterqa" title="Free Code Camp" target="_blank"><i class="fab fa-free-code-camp"></i> FreeCodeCamp</a>
+          <a href="https://www.sololearn.com/Profile/12411250" title="Solo Learn" target="_blank">SoloLearn</a>
+        </div>
+
+        <!-- <form action="" id="contact-form">
+        <div class="form-group">
+            <label for="name">Name: </label> <br>
+            <input class="form-control" type="text" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+            <label for="name">Email: </label> <br>
+            <input class="form-control" type="email" placeholder="example@email.com">
+        </div>
+        <div class="form-group">
+            <label for="name">Message: </label> <br>
+            <textarea class="form-control" name="message" id="" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit">Contact</button>
+        </form> -->
+        <div class="btt"><small>Back to Top</small> <a href="#welcome" title="Back to top"><i class="fas fa-level-up-alt"></i></a></div>
+
+    </section>
+    <footer>
+      <nav id="site-nav">
+        <a href="#about" title="About"><i class="fas fa-address-card"></i> About</a>
+        <a href="#skills" title="Skills"><i class="fas fa-clipboard-list"></i> Skills</a>
+        <a href="#projects" title="Projects"><i class="fas fa-ruler-vertical"></i> Projects</a>
+        <a href="#achivements" title="Achievements"><i class="fas fa-graduation-cap"></i> Achievements</a>
+        <a href="#contact" title="Contact"><i class="fas fa-comment"></i> Social</a>
+      </nav>
+      Copyright <i class="far fa-copyright"></i> 2020
+    </footer>
+  </body>
+</html>
