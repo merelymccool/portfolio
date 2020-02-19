@@ -22,6 +22,7 @@
         padding-right: 1em;
       }
       nav,
+      #footer-site-nav,
       .social,
       .achievements-nav {
         display: flex;
@@ -32,11 +33,13 @@
 
       @media only screen and (min-width: 768px) {
         nav,
+        #footer-site-nav,
         .social,
         .achievements-nav { flex-direction: row; }
       }
 
       nav a,
+      #footer-site-nav a,
       .social a,
       .achievements-nav a {
         flex: 1;
@@ -48,7 +51,7 @@
         text-decoration: underline;
         text-transform: uppercase;
         font-family: 'Odibee Sans', cursive;
-        color: #f46500;
+        color: #1b2c00;
       }
       a {
         color: #1b2c00;
@@ -59,7 +62,11 @@
       }
 
       i {
-        color: #4d7701;
+        color: #f46500;
+      }
+
+      .i-box {
+        text-align: center;
       }
 
       #welcome {
@@ -87,19 +94,33 @@
         background-color: #f4f0f4;
       }
 
-      .achievements-flex {
+      .achievements-flex,
+      .skills-flex {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
       }
 
-      .ach-flex-box {
+      .ach-flex-box,
+      .skl-grid-box {
         height: auto;
         width: auto;
         padding: 0.25em;
         margin: 0.25em;
       }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 100%;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .skills-grid { 
+          grid-template-columns: 50% 50%;
+          grid-template-rows: auto; }
+      }
+
 
       h1,
       h2,
@@ -198,7 +219,10 @@
 
     <section id="skills">
       <h1 id="skills-h1">Skills</h1>
-      <div>Testing</div>
+
+      <div class="skills-grid">
+        <div class="skl-grid-box">
+      <h4>Testing</h4>
         <ul class="fa-ul mb-3">
           <li>
             <i class="fa-li fas fa-check"></i>
@@ -225,8 +249,10 @@
             <i class="fa-li fas fa-check"></i>
             Test Planning &amp; Reporting</li>
         </ul>
+      </div>
 
-        <div class="subheading mb-3">Test Tools</div>
+      <div class="skl-grid-box">
+        <h4>Test Tools</h4>
         <ul class="fa-ul mb-3">
           <li>
             <i class="fa-li fas fa-check"></i>
@@ -253,32 +279,56 @@
             <i class="fa-li fas fa-check"></i>
             UFT / QTP</li>
         </ul>
+      </div>
+    </div>
 
-      <div class="">Programming Languages</div>
+    <div class="skills-grid">
+      <div class="skl-grid-box">
+        <h4>Programming Languages</h4>
+          <div class="i-box">
             <i class="fab fa-html5 fa-2x"></i>
             <i class="fab fa-css3-alt fa-2x"></i>
             <i class="fab fa-js-square fa-2x"></i>
             <i class="fab fa-php fa-2x"></i>
-      <div class="subheading mb-3">Browsers</div>
+            <i class="fab fa-python fa-2x"></i>
+          </div>
+        <h4>Browsers</h4>
+          <div class="i-box">
             <i class="fab fa-chrome fa-2x"></i>
             <i class="fab fa-firefox fa-2x"></i>
             <i class="fab fa-edge fa-2x"></i>
             <i class="fab fa-internet-explorer fa-2x"></i>
             <i class="fab fa-safari fa-2x"></i>
-      <div class="subheading mb-3">Operating Systems</div>
+          </div>
+        <h4>Operating Systems</h4>
+          <div class="i-box">
             <i class="fab fa-apple fa-2x"></i>
             <i class="fab fa-windows fa-2x"></i>
             <i class="fab fa-android fa-2x"></i>
-      <div class="subheading mb-3">Version Control</div>
+          </div>
+
+      </div>
+
+      <div class="skl-grid-box">
+      <h4>Version Control</h4>
+      <div class="i-box">
             <i class="fab fa-git fa-2x"></i>
             <i class="fab fa-bitbucket fa-2x"></i>
             <i class="fab fa-github fa-2x"></i>
-      <div class="subheading mb-3">Communication</div>
+            <i class="fab fa-gitlab fa-2x"></i>
+          </div>
+      <h4>Communication</h4>
+      <div class="i-box">
             <i class="fab fa-slack fa-2x"></i>
             <i class="fab fa-skype fa-2x"></i>
-      <div class="subheading mb-3">Project Management</div>
+          </div>
+      <h4>Project Management</h4>
+      <div class="i-box">
             <i class="fab fa-jira fa-2x"></i>
             <i class="fab fa-trello fa-2x"></i>
+          </div>
+          </div>
+        </div>
 
       <div class="btt"><a href="#welcome" title="Back to top"><small>Back to Top</small> <i class="fas fa-level-up-alt"></i></a></div>
 
@@ -420,13 +470,13 @@
 
     </section>
     <footer>
-      <nav id="site-nav">
+      <div id="footer-site-nav">
         <a href="#about" title="About"><i class="fas fa-address-card"></i> About</a>
         <a href="#skills" title="Skills"><i class="fas fa-clipboard-list"></i> Skills</a>
         <a href="#projects" title="Projects"><i class="fas fa-ruler-vertical"></i> Projects</a>
         <a href="#achivements" title="Achievements"><i class="fas fa-graduation-cap"></i> Achievements</a>
         <a href="#contact" title="Contact"><i class="fas fa-comment"></i> Social</a>
-      </nav>
+      </div>
       Copyright <i class="far fa-copyright"></i> 2020
     </footer>
   </body>

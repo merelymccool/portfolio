@@ -67,7 +67,7 @@ context('Assertions', () => {
         //Validate title
         cy.get('#projects-h1').should('have.text','Projects');
         //Validate Back to Top link
-        cy.get('#about')
+        cy.get('#projects')
         .should('have.descendants','div.btt');
 
     })
@@ -76,7 +76,7 @@ context('Assertions', () => {
         //Validate title
         cy.get('#skills-h1').should('have.text','Skills');
         //Validate Back to Top link
-        cy.get('#about')
+        cy.get('#skills')
         .should('have.descendants','div.btt');
 
     })
@@ -113,7 +113,7 @@ context('Assertions', () => {
         .and('have.attr', 'href')
         .and('include', '#grasshopper');
         //Validate certificate blocks
-        cy.get('#achievements-flex > div').should(($ach) => {
+        cy.get('.achievements-flex > div').should(($ach) => {
             expect($ach).to.have.length(19)
             expect($ach.eq(0)).to.have.class('ach-flex-box')
             .and.to.have.descendants('a')
@@ -174,7 +174,7 @@ context('Assertions', () => {
             .and.to.have.descendants('img');
         })
         //Validate Back to Top link
-        cy.get('#about')
+        cy.get('#achievements')
         .should('have.descendants','div.btt');
 
 
@@ -217,9 +217,44 @@ context('Assertions', () => {
             .and.have.attr('target','_blank')
         })
         //Validate Back to Top link
-        cy.get('#about')
+        cy.get('#contact')
         .should('have.descendants','div.btt');
 
+
+    })
+
+    it('Footer block', () => {
+        //Validate no Back to Top link
+        cy.get('footer')
+        .should('have.descendants', 'div#footer-site-nav')
+        //Validate no Back to Top link
+        .and('not.have.descendants','div.btt');
+        //Validate nav items
+        cy.get('#footer-site-nav')
+        .find('a:first-child')
+        .should('contain','About')
+        .and('have.attr', 'href')
+        .and('include', '#about');
+        cy.get('#site-nav')
+        .find('a:nth-child(2)')
+        .should('contain','Skills')
+        .and('have.attr', 'href')
+        .and('include', '#skills');
+        cy.get('#site-nav')
+        .find('a:nth-child(3)')
+        .should('contain','Projects')
+        .and('have.attr', 'href')
+        .and('include', '#projects');
+        cy.get('#site-nav')
+        .find('a:nth-child(4)')
+        .should('contain','Achievements')
+        .and('have.attr', 'href')
+        .and('include', '#achievements');
+        cy.get('#site-nav')
+        .find('a:last-child')
+        .should('contain','Social')
+        .and('have.attr', 'href')
+        .and('include', '#contact');
 
     })
 
