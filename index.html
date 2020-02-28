@@ -94,8 +94,7 @@
         background-color: #f4f0f4;
       }
 
-      .achievements-flex,
-      .skills-flex {
+      .achievements-flex {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -121,6 +120,35 @@
           grid-template-rows: auto; }
       }
 
+      .row {
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+        margin-right:-15px;
+        margin-left:-15px;
+      }
+      .project-box {
+        position:relative;
+        width:100%;
+        padding-right:15px;
+        padding-left:15px;
+      }
+
+      .project-btn {
+        display:inline-block;
+        font-weight:400;
+        color:#fff;
+        background-color:#9e8d8f;
+        border-color:#9e8d8f;
+        text-align:center;
+        vertical-align:middle;
+        padding:.375rem .75rem;
+        font-size:1rem;
+        line-height:1.5;
+        border-radius:.25rem;
+        }
+
 
       h1,
       h2,
@@ -144,12 +172,24 @@
         margin: auto;
       }
 
-      .img-achievements {
+      .img-project {
+        display: block;
+        max-width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        height:auto;
+        border: 2px solid #9e8d8f;
+        border-radius:.25rem;
+      }
+
+      .img-achievements,
+      .img-projects {
         width: 150px;
       }
 
       @media only screen and (min-width: 768px) {
-        .img-achievements { 
+        .img-achievements,
+        .img-projects { 
           width: 300px; }
       }
 
@@ -158,7 +198,6 @@
       }
       .form-control {
             display: block;
-            /* width: 95%; */
             height: 34px;
             padding: 6px 12px;
             font-size: 14px;
@@ -180,8 +219,6 @@
         
         footer {
           height: auto;
-          /* margin: 0.25em;
-          padding: 1em; */
           color: #9e8d8f;
         }
     </style>
@@ -336,8 +373,61 @@
 
     <section id="projects">
       <h1 id="projects-h1">Projects</h1>
-      <p>Wherry squiffy belay jack yard hornswaggle bilged on her anchor to go on account lee Pirate Round bring a spring upon her cable gabion. Jack Tar flogging keelhaul Arr spanker Cat o'nine tails knave squiffy salmagundi galleon barque Jolly Roger. Come about gaff keel Sail ho Jolly Roger doubloon snow lateen sail bilge grog blossom league blow the man down. Hornswaggle hands log bowsprit ballast Chain Shot lugsail red ensign starboard run a shot across the bow rutters Shiver me timbers. Hulk rope's end keelhaul topgallant Privateer hearties measured fer yer chains fire ship shrouds hogshead rum wherry.</p>
-      <div class="btt"><a href="#welcome" title="Back to top"><small>Back to Top</small> <i class="fas fa-level-up-alt"></i></a></div>
+      <div class="row">
+        <div class="project-box">
+          <a href="#">
+            <img class="img-project" src="https://via.placeholder.com/728x100.jpg/F4F0F4/4D7701?text=PHP+Password+Manager" alt="PHP Password Manager">
+          </a>
+        </div>
+        <div class="project-box">
+          <h3>PHP Password Manager</h3>
+          <div class="i-box">
+            <i class="fab fa-html5 fa-2x"></i>
+            <i class="fab fa-css3-alt fa-2x"></i>
+            <i class="fab fa-php fa-2x"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+          <a class="project-btn" href="https://github.com/merelymccool/udemyDemo/tree/master/psapp">View Code</a>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="project-box">
+          <a href="#">
+            <img class="img-project" src="https://via.placeholder.com/728x100.jpg/F4F0F4/4D7701?text=PHP+CMS+Project" alt="PHP CMS Project">
+          </a>
+        </div>
+        <div class="project-box">
+          <h3>PHP CMS Project</h3>
+          <div class="i-box">
+            <i class="fab fa-html5 fa-2x"></i>
+            <i class="fab fa-css3-alt fa-2x"></i>
+            <i class="fab fa-php fa-2x"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+          <a class="project-btn" href="https://github.com/merelymccool/udemyDemo/tree/master/cms">View Code</a>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="project-box">
+          <a href="#">
+            <img class="img-project" src="https://via.placeholder.com/728x100.jpg/F4F0F4/4D7701?text=JavaScript+Tic-Tac-Toe" alt="PHP CMS Project">
+          </a>
+        </div>
+        <div class="project-box">
+          <h3>JavaScript Tic-Tac-Toe</h3>
+          <div class="i-box">
+            <i class="fab fa-html5 fa-2x"></i>
+            <i class="fab fa-css3-alt fa-2x"></i>
+            <i class="fab fa-js-square fa-2x"></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+          <a class="project-btn" href="./ttt/ttt.html">View Demo</a> <a class="project-btn" href="https://github.com/merelymccool/portfolio/tree/master/img">View Code</a>
+        </div>
+      </div>
+
+      <div class="btt"><small>Back to Top</small> <a href="#welcome" title="Back to top"><i class="fas fa-level-up-alt"></i></a></div>
 
     </section>
 
