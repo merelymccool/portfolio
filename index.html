@@ -170,6 +170,7 @@
         border: 2px solid #f46500;
         border-radius: 50%;
         margin: auto;
+        animation: bounceIn 500ms;
       }
 
       .img-project {
@@ -196,6 +197,21 @@
       .btt {
         text-align: end;
       }
+
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
       .form-control {
             display: block;
             height: 34px;
@@ -387,7 +403,7 @@
             <i class="fab fa-js-square fa-2x"></i>
           </div>
           <p>How much can you really spend on snacks for that party? Find out with this budget app! </p>
-          <a class="project-btn" href="./bgt/budget.html">View Demo</a> <a class="project-btn" href="https://github.com/merelymccool/portfolio/tree/master/bgt">View Code</a>
+          <a class="project-btn" href="./bgt/budget.html" title="View Demo">View Demo</a> <a class="project-btn" href="https://github.com/merelymccool/portfolio/tree/master/bgt" rel="noreferrer" title="View Code" target="_blank">View Code</a>
         </div>
       </div>
       <hr>
@@ -405,7 +421,7 @@
             <i class="fab fa-js-square fa-2x"></i>
           </div>
           <p>The World's Most Difficult Tic Tac Toe Game. TODO: make an "easy" level so I can win.</p>
-          <a class="project-btn" href="./ttt/ttt.html">View Demo</a> <a class="project-btn" href="https://github.com/merelymccool/portfolio/tree/master/ttt">View Code</a>
+          <a class="project-btn" href="./ttt/ttt.html" title="View Demo">View Demo</a> <a class="project-btn" href="https://github.com/merelymccool/portfolio/tree/master/ttt" rel="noreferrer" title="View Code" target="_blank">View Code</a>
         </div>
       </div>
       <hr>
@@ -423,7 +439,7 @@
             <i class="fab fa-php fa-2x"></i>
           </div>
           <p>Manage your passwords in this handy passwod manager app. TODO: Decrypt the passwords so you can actually reference them!</p>
-          <a class="project-btn" href="https://github.com/merelymccool/udemyDemo/tree/master/psapp">View Code</a>
+          <a class="project-btn" href="https://github.com/merelymccool/udemyDemo/tree/master/psapp" rel="noreferrer" title="View Code" target="_blank">View Code</a>
         </div>
       </div>
       <hr>
@@ -441,7 +457,7 @@
             <i class="fab fa-php fa-2x"></i>
           </div>
           <p>This Content Management System includes multiple databases for Posts, Categories, Users and Likes. You can register, login and start a session, like a post, logout and end the session.</p>
-          <a class="project-btn" href="https://github.com/merelymccool/udemyDemo/tree/master/cms">View Code</a>
+          <a class="project-btn" href="https://github.com/merelymccool/udemyDemo/tree/master/cms" rel="noreferrer" title="View Code" target="_blank">View Code</a>
         </div>
       </div>
 
@@ -557,6 +573,7 @@
           <a href="https://testautomationu.applitools.com/me.html#BugHunterQA" title="Test Automation University" rel="noreferrer" target="_blank">TestAutomation University</a>
           <a href="https://www.freecodecamp.org/bughunterqa" title="Free Code Camp" rel="noreferrer" target="_blank"><i class="fab fa-free-code-camp"></i> FreeCodeCamp</a>
           <a href="https://www.sololearn.com/Profile/12411250" title="Solo Learn" rel="noreferrer" target="_blank">SoloLearn</a>
+          <a href="https://codepen.io/BugHunterQA" title="CodePen" rel="noreferrer" target="_blank">CodePen</a>
         </div>
 
         <!-- <form action="" id="contact-form">
