@@ -22,7 +22,7 @@ class UI {
     const value = this.budgetInput.value;
     if(value==='' || value <0){
       this.budgetFeedback.classList.add('showItem');
-      this.budgetFeedback.innerHTML = `<p>Budget cannot be empty of negative!</p>`;
+      this.budgetFeedback.innerHTML = `<p>Budget cannot be empty or negative!</p>`;
       const self = this;
       // console.log(this);
       setTimeout(function(){
@@ -68,8 +68,6 @@ class UI {
       },4000)
     } else {
       let amount = parseInt(amountValue);
-      // this.expenseInput.value = '';
-      // this.amountInput.value = '';
 
       let expense = {
         id:this.itemID,
@@ -96,7 +94,7 @@ class UI {
        <h5 class="expense-amount mb-0 list-item">- ${expense.amount}</h5>
        <div class="expense-icons list-item">
         <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
-         <i class="fas fa-edit"></i>
+         <i class="fas fa-pen-square"></i>
         </a>
         <a href="#" class="delete-icon" data-id="${expense.id}">
          <i class="fas fa-trash"></i>
@@ -130,10 +128,12 @@ class UI {
     //traverse the dom
     let parent = element.parentElement.parentElement.parentElement;
     //remove from dom
+    // console.log(parent);
     this.expenseList.removeChild(parent);
     let expense = this.itemList.filter(function(item){
       return item.id === id;
     })
+    // console.log(expense);
     //show value in fields
     this.expenseInput.value = expense[0].title;
     this.amountInput.value = expense[0].amount;
@@ -186,6 +186,7 @@ function eventListeners(){
   //expense list click
   expenseList.addEventListener('click', function(event){
     // console.log(event.target.parentElement);
+    event.preventDefault();
     if(event.target.parentElement.classList.contains('edit-icon')){
       ui.editExpense(event.target.parentElement);
     } else if(event.target.parentElement.classList.contains('delete-icon')){
